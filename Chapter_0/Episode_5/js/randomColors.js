@@ -5,9 +5,11 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 window.addEventListener("resize", handleWindowResize);
+
 function handleWindowResize()
 {
-	// get the new window dimensions and update the halfCanvasW and H variables
+	// Get the new window dimensions and 
+	// update the halfCanvasW and H variables
 	canvas.width = window.innerWidth;
 	canvas.height = window.innerHeight;
 	halfCanvasW = canvas.width / 2;
@@ -17,20 +19,25 @@ function handleWindowResize()
 }
 
 let text = document.getElementById("myText");
+
 window.addEventListener("mousedown", handleMouseDown);
+
 function handleMouseDown()
 {
 	text.innerHTML = "You pressed the mouse!";
 }
 
 window.addEventListener("mouseup", handleMouseUp);
+
 function handleMouseUp()
 {
 	text.innerHTML = "This is some text";
 }
 
 let button = document.getElementById("myButton");
+
 button.addEventListener("click", handleButtonClick);
+
 function handleButtonClick()
 {
 	rectW = Math.random() * 200 + 5;
@@ -71,7 +78,6 @@ function randomizeColorString()
 
 	colorString = "rgb(" + r + "," + g + "," + b + ")";
 }
-
 
 function draw()
 {
